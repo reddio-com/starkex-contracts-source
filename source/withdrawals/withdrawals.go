@@ -30,7 +30,7 @@ var (
 
 // WithdrawalsMetaData contains all meta data concerning the Withdrawals contract.
 var WithdrawalsMetaData = &bind.MetaData{
-	ABI: "[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonQuantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"}],\"name\":\"LogMintWithdrawalPerformed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"LogNftWithdrawalPerformed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonQuantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"LogWithdrawalPerformed\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"}],\"name\":\"getAssetInfo\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"assetInfo\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"}],\"name\":\"getEthKey\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"presumedAssetType\",\"type\":\"uint256\"}],\"name\":\"getQuantum\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"quantum\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"}],\"name\":\"getWithdrawalBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isFrozen\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"mintingBlob\",\"type\":\"bytes\"}],\"name\":\"withdrawAndMint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"withdrawNft\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
+	ABI: "[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonQuantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"}],\"name\":\"LogMintWithdrawalPerformed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"LogNftWithdrawalPerformed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonQuantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"LogWithdrawalPerformed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonQuantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"LogWithdrawalWithTokenIdPerformed\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"calculateAssetIdWithTokenId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"mintingBlob\",\"type\":\"bytes\"}],\"name\":\"calculateMintableAssetId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"}],\"name\":\"getAssetInfo\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"}],\"name\":\"getEthKey\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"presumedAssetType\",\"type\":\"uint256\"}],\"name\":\"getQuantum\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"quantum\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"}],\"name\":\"getWithdrawalBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isFrozen\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"mintingBlob\",\"type\":\"bytes\"}],\"name\":\"withdrawAndMint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"withdrawNft\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"withdrawWithTokenId\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
 }
 
 // WithdrawalsABI is the input ABI used to generate the binding from.
@@ -179,9 +179,71 @@ func (_Withdrawals *WithdrawalsTransactorRaw) Transact(opts *bind.TransactOpts, 
 	return _Withdrawals.Contract.contract.Transact(opts, method, params...)
 }
 
+// CalculateAssetIdWithTokenId is a free data retrieval call binding the contract method 0xa1cc5e13.
+//
+// Solidity: function calculateAssetIdWithTokenId(uint256 assetType, uint256 tokenId) view returns(uint256)
+func (_Withdrawals *WithdrawalsCaller) CalculateAssetIdWithTokenId(opts *bind.CallOpts, assetType *big.Int, tokenId *big.Int) (*big.Int, error) {
+	var out []interface{}
+	err := _Withdrawals.contract.Call(opts, &out, "calculateAssetIdWithTokenId", assetType, tokenId)
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// CalculateAssetIdWithTokenId is a free data retrieval call binding the contract method 0xa1cc5e13.
+//
+// Solidity: function calculateAssetIdWithTokenId(uint256 assetType, uint256 tokenId) view returns(uint256)
+func (_Withdrawals *WithdrawalsSession) CalculateAssetIdWithTokenId(assetType *big.Int, tokenId *big.Int) (*big.Int, error) {
+	return _Withdrawals.Contract.CalculateAssetIdWithTokenId(&_Withdrawals.CallOpts, assetType, tokenId)
+}
+
+// CalculateAssetIdWithTokenId is a free data retrieval call binding the contract method 0xa1cc5e13.
+//
+// Solidity: function calculateAssetIdWithTokenId(uint256 assetType, uint256 tokenId) view returns(uint256)
+func (_Withdrawals *WithdrawalsCallerSession) CalculateAssetIdWithTokenId(assetType *big.Int, tokenId *big.Int) (*big.Int, error) {
+	return _Withdrawals.Contract.CalculateAssetIdWithTokenId(&_Withdrawals.CallOpts, assetType, tokenId)
+}
+
+// CalculateMintableAssetId is a free data retrieval call binding the contract method 0xb12773fb.
+//
+// Solidity: function calculateMintableAssetId(uint256 assetType, bytes mintingBlob) pure returns(uint256)
+func (_Withdrawals *WithdrawalsCaller) CalculateMintableAssetId(opts *bind.CallOpts, assetType *big.Int, mintingBlob []byte) (*big.Int, error) {
+	var out []interface{}
+	err := _Withdrawals.contract.Call(opts, &out, "calculateMintableAssetId", assetType, mintingBlob)
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// CalculateMintableAssetId is a free data retrieval call binding the contract method 0xb12773fb.
+//
+// Solidity: function calculateMintableAssetId(uint256 assetType, bytes mintingBlob) pure returns(uint256)
+func (_Withdrawals *WithdrawalsSession) CalculateMintableAssetId(assetType *big.Int, mintingBlob []byte) (*big.Int, error) {
+	return _Withdrawals.Contract.CalculateMintableAssetId(&_Withdrawals.CallOpts, assetType, mintingBlob)
+}
+
+// CalculateMintableAssetId is a free data retrieval call binding the contract method 0xb12773fb.
+//
+// Solidity: function calculateMintableAssetId(uint256 assetType, bytes mintingBlob) pure returns(uint256)
+func (_Withdrawals *WithdrawalsCallerSession) CalculateMintableAssetId(assetType *big.Int, mintingBlob []byte) (*big.Int, error) {
+	return _Withdrawals.Contract.CalculateMintableAssetId(&_Withdrawals.CallOpts, assetType, mintingBlob)
+}
+
 // GetAssetInfo is a free data retrieval call binding the contract method 0xf637d950.
 //
-// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes assetInfo)
+// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes)
 func (_Withdrawals *WithdrawalsCaller) GetAssetInfo(opts *bind.CallOpts, assetType *big.Int) ([]byte, error) {
 	var out []interface{}
 	err := _Withdrawals.contract.Call(opts, &out, "getAssetInfo", assetType)
@@ -198,14 +260,14 @@ func (_Withdrawals *WithdrawalsCaller) GetAssetInfo(opts *bind.CallOpts, assetTy
 
 // GetAssetInfo is a free data retrieval call binding the contract method 0xf637d950.
 //
-// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes assetInfo)
+// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes)
 func (_Withdrawals *WithdrawalsSession) GetAssetInfo(assetType *big.Int) ([]byte, error) {
 	return _Withdrawals.Contract.GetAssetInfo(&_Withdrawals.CallOpts, assetType)
 }
 
 // GetAssetInfo is a free data retrieval call binding the contract method 0xf637d950.
 //
-// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes assetInfo)
+// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes)
 func (_Withdrawals *WithdrawalsCallerSession) GetAssetInfo(assetType *big.Int) ([]byte, error) {
 	return _Withdrawals.Contract.GetAssetInfo(&_Withdrawals.CallOpts, assetType)
 }
@@ -274,7 +336,7 @@ func (_Withdrawals *WithdrawalsCallerSession) GetQuantum(presumedAssetType *big.
 
 // GetWithdrawalBalance is a free data retrieval call binding the contract method 0xec3161b0.
 //
-// Solidity: function getWithdrawalBalance(uint256 ownerKey, uint256 assetId) view returns(uint256 balance)
+// Solidity: function getWithdrawalBalance(uint256 ownerKey, uint256 assetId) view returns(uint256)
 func (_Withdrawals *WithdrawalsCaller) GetWithdrawalBalance(opts *bind.CallOpts, ownerKey *big.Int, assetId *big.Int) (*big.Int, error) {
 	var out []interface{}
 	err := _Withdrawals.contract.Call(opts, &out, "getWithdrawalBalance", ownerKey, assetId)
@@ -291,14 +353,14 @@ func (_Withdrawals *WithdrawalsCaller) GetWithdrawalBalance(opts *bind.CallOpts,
 
 // GetWithdrawalBalance is a free data retrieval call binding the contract method 0xec3161b0.
 //
-// Solidity: function getWithdrawalBalance(uint256 ownerKey, uint256 assetId) view returns(uint256 balance)
+// Solidity: function getWithdrawalBalance(uint256 ownerKey, uint256 assetId) view returns(uint256)
 func (_Withdrawals *WithdrawalsSession) GetWithdrawalBalance(ownerKey *big.Int, assetId *big.Int) (*big.Int, error) {
 	return _Withdrawals.Contract.GetWithdrawalBalance(&_Withdrawals.CallOpts, ownerKey, assetId)
 }
 
 // GetWithdrawalBalance is a free data retrieval call binding the contract method 0xec3161b0.
 //
-// Solidity: function getWithdrawalBalance(uint256 ownerKey, uint256 assetId) view returns(uint256 balance)
+// Solidity: function getWithdrawalBalance(uint256 ownerKey, uint256 assetId) view returns(uint256)
 func (_Withdrawals *WithdrawalsCallerSession) GetWithdrawalBalance(ownerKey *big.Int, assetId *big.Int) (*big.Int, error) {
 	return _Withdrawals.Contract.GetWithdrawalBalance(&_Withdrawals.CallOpts, ownerKey, assetId)
 }
@@ -395,6 +457,27 @@ func (_Withdrawals *WithdrawalsSession) WithdrawNft(ownerKey *big.Int, assetType
 // Solidity: function withdrawNft(uint256 ownerKey, uint256 assetType, uint256 tokenId) returns()
 func (_Withdrawals *WithdrawalsTransactorSession) WithdrawNft(ownerKey *big.Int, assetType *big.Int, tokenId *big.Int) (*types.Transaction, error) {
 	return _Withdrawals.Contract.WithdrawNft(&_Withdrawals.TransactOpts, ownerKey, assetType, tokenId)
+}
+
+// WithdrawWithTokenId is a paid mutator transaction binding the contract method 0x64d84842.
+//
+// Solidity: function withdrawWithTokenId(uint256 ownerKey, uint256 assetType, uint256 tokenId) returns()
+func (_Withdrawals *WithdrawalsTransactor) WithdrawWithTokenId(opts *bind.TransactOpts, ownerKey *big.Int, assetType *big.Int, tokenId *big.Int) (*types.Transaction, error) {
+	return _Withdrawals.contract.Transact(opts, "withdrawWithTokenId", ownerKey, assetType, tokenId)
+}
+
+// WithdrawWithTokenId is a paid mutator transaction binding the contract method 0x64d84842.
+//
+// Solidity: function withdrawWithTokenId(uint256 ownerKey, uint256 assetType, uint256 tokenId) returns()
+func (_Withdrawals *WithdrawalsSession) WithdrawWithTokenId(ownerKey *big.Int, assetType *big.Int, tokenId *big.Int) (*types.Transaction, error) {
+	return _Withdrawals.Contract.WithdrawWithTokenId(&_Withdrawals.TransactOpts, ownerKey, assetType, tokenId)
+}
+
+// WithdrawWithTokenId is a paid mutator transaction binding the contract method 0x64d84842.
+//
+// Solidity: function withdrawWithTokenId(uint256 ownerKey, uint256 assetType, uint256 tokenId) returns()
+func (_Withdrawals *WithdrawalsTransactorSession) WithdrawWithTokenId(ownerKey *big.Int, assetType *big.Int, tokenId *big.Int) (*types.Transaction, error) {
+	return _Withdrawals.Contract.WithdrawWithTokenId(&_Withdrawals.TransactOpts, ownerKey, assetType, tokenId)
 }
 
 // WithdrawalsLogMintWithdrawalPerformedIterator is returned from FilterLogMintWithdrawalPerformed and is used to iterate over the raw logs and unpacked data for LogMintWithdrawalPerformed events raised by the Withdrawals contract.
@@ -805,6 +888,146 @@ func (_Withdrawals *WithdrawalsFilterer) WatchLogWithdrawalPerformed(opts *bind.
 func (_Withdrawals *WithdrawalsFilterer) ParseLogWithdrawalPerformed(log types.Log) (*WithdrawalsLogWithdrawalPerformed, error) {
 	event := new(WithdrawalsLogWithdrawalPerformed)
 	if err := _Withdrawals.contract.UnpackLog(event, "LogWithdrawalPerformed", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// WithdrawalsLogWithdrawalWithTokenIdPerformedIterator is returned from FilterLogWithdrawalWithTokenIdPerformed and is used to iterate over the raw logs and unpacked data for LogWithdrawalWithTokenIdPerformed events raised by the Withdrawals contract.
+type WithdrawalsLogWithdrawalWithTokenIdPerformedIterator struct {
+	Event *WithdrawalsLogWithdrawalWithTokenIdPerformed // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *WithdrawalsLogWithdrawalWithTokenIdPerformedIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(WithdrawalsLogWithdrawalWithTokenIdPerformed)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(WithdrawalsLogWithdrawalWithTokenIdPerformed)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *WithdrawalsLogWithdrawalWithTokenIdPerformedIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *WithdrawalsLogWithdrawalWithTokenIdPerformedIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// WithdrawalsLogWithdrawalWithTokenIdPerformed represents a LogWithdrawalWithTokenIdPerformed event raised by the Withdrawals contract.
+type WithdrawalsLogWithdrawalWithTokenIdPerformed struct {
+	OwnerKey           *big.Int
+	AssetType          *big.Int
+	TokenId            *big.Int
+	AssetId            *big.Int
+	NonQuantizedAmount *big.Int
+	QuantizedAmount    *big.Int
+	Recipient          common.Address
+	Raw                types.Log // Blockchain specific contextual infos
+}
+
+// FilterLogWithdrawalWithTokenIdPerformed is a free log retrieval operation binding the contract event 0xc6ba68235f3229e53f3a95cda25543ad54c0f6df2493a06c05fb930bea7966fe.
+//
+// Solidity: event LogWithdrawalWithTokenIdPerformed(uint256 ownerKey, uint256 assetType, uint256 tokenId, uint256 assetId, uint256 nonQuantizedAmount, uint256 quantizedAmount, address recipient)
+func (_Withdrawals *WithdrawalsFilterer) FilterLogWithdrawalWithTokenIdPerformed(opts *bind.FilterOpts) (*WithdrawalsLogWithdrawalWithTokenIdPerformedIterator, error) {
+
+	logs, sub, err := _Withdrawals.contract.FilterLogs(opts, "LogWithdrawalWithTokenIdPerformed")
+	if err != nil {
+		return nil, err
+	}
+	return &WithdrawalsLogWithdrawalWithTokenIdPerformedIterator{contract: _Withdrawals.contract, event: "LogWithdrawalWithTokenIdPerformed", logs: logs, sub: sub}, nil
+}
+
+// WatchLogWithdrawalWithTokenIdPerformed is a free log subscription operation binding the contract event 0xc6ba68235f3229e53f3a95cda25543ad54c0f6df2493a06c05fb930bea7966fe.
+//
+// Solidity: event LogWithdrawalWithTokenIdPerformed(uint256 ownerKey, uint256 assetType, uint256 tokenId, uint256 assetId, uint256 nonQuantizedAmount, uint256 quantizedAmount, address recipient)
+func (_Withdrawals *WithdrawalsFilterer) WatchLogWithdrawalWithTokenIdPerformed(opts *bind.WatchOpts, sink chan<- *WithdrawalsLogWithdrawalWithTokenIdPerformed) (event.Subscription, error) {
+
+	logs, sub, err := _Withdrawals.contract.WatchLogs(opts, "LogWithdrawalWithTokenIdPerformed")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(WithdrawalsLogWithdrawalWithTokenIdPerformed)
+				if err := _Withdrawals.contract.UnpackLog(event, "LogWithdrawalWithTokenIdPerformed", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseLogWithdrawalWithTokenIdPerformed is a log parse operation binding the contract event 0xc6ba68235f3229e53f3a95cda25543ad54c0f6df2493a06c05fb930bea7966fe.
+//
+// Solidity: event LogWithdrawalWithTokenIdPerformed(uint256 ownerKey, uint256 assetType, uint256 tokenId, uint256 assetId, uint256 nonQuantizedAmount, uint256 quantizedAmount, address recipient)
+func (_Withdrawals *WithdrawalsFilterer) ParseLogWithdrawalWithTokenIdPerformed(log types.Log) (*WithdrawalsLogWithdrawalWithTokenIdPerformed, error) {
+	event := new(WithdrawalsLogWithdrawalWithTokenIdPerformed)
+	if err := _Withdrawals.contract.UnpackLog(event, "LogWithdrawalWithTokenIdPerformed", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log

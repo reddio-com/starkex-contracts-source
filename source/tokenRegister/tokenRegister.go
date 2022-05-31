@@ -30,7 +30,7 @@ var (
 
 // TokenRegisterMetaData contains all meta data concerning the TokenRegister contract.
 var TokenRegisterMetaData = &bind.MetaData{
-	ABI: "[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"tokenAdmin\",\"type\":\"address\"}],\"name\":\"LogTokenAdminAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"tokenAdmin\",\"type\":\"address\"}],\"name\":\"LogTokenAdminRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"assetInfo\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantum\",\"type\":\"uint256\"}],\"name\":\"LogTokenRegistered\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEPOSIT_CANCEL_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"FREEZE_GRACE_PERIOD\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MAX_FORCED_ACTIONS_REQS_PER_BLOCK\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MAX_VERIFIER_COUNT\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"UNFREEZE_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"VERIFIER_REMOVAL_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"}],\"name\":\"getAssetInfo\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"assetInfo\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"}],\"name\":\"isAssetRegistered\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"testedAdmin\",\"type\":\"address\"}],\"name\":\"isTokenAdmin\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"assetInfo\",\"type\":\"bytes\"}],\"name\":\"registerToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"assetInfo\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"quantum\",\"type\":\"uint256\"}],\"name\":\"registerToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"registerTokenAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"oldAdmin\",\"type\":\"address\"}],\"name\":\"unregisterTokenAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
+	ABI: "[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"tokenAdmin\",\"type\":\"address\"}],\"name\":\"LogTokenAdminAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"tokenAdmin\",\"type\":\"address\"}],\"name\":\"LogTokenAdminRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"assetInfo\",\"type\":\"bytes\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantum\",\"type\":\"uint256\"}],\"name\":\"LogTokenRegistered\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEPOSIT_CANCEL_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"FREEZE_GRACE_PERIOD\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MAX_FORCED_ACTIONS_REQS_PER_BLOCK\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MAX_VERIFIER_COUNT\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"UNFREEZE_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"VERIFIER_REMOVAL_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"calculateAssetIdWithTokenId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"mintingBlob\",\"type\":\"bytes\"}],\"name\":\"calculateMintableAssetId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"}],\"name\":\"getAssetInfo\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"}],\"name\":\"isAssetRegistered\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"testedAdmin\",\"type\":\"address\"}],\"name\":\"isTokenAdmin\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"assetInfo\",\"type\":\"bytes\"}],\"name\":\"registerToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"assetInfo\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"quantum\",\"type\":\"uint256\"}],\"name\":\"registerToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"registerTokenAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"oldAdmin\",\"type\":\"address\"}],\"name\":\"unregisterTokenAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
 }
 
 // TokenRegisterABI is the input ABI used to generate the binding from.
@@ -365,9 +365,71 @@ func (_TokenRegister *TokenRegisterCallerSession) VERIFIERREMOVALDELAY() (*big.I
 	return _TokenRegister.Contract.VERIFIERREMOVALDELAY(&_TokenRegister.CallOpts)
 }
 
+// CalculateAssetIdWithTokenId is a free data retrieval call binding the contract method 0xa1cc5e13.
+//
+// Solidity: function calculateAssetIdWithTokenId(uint256 assetType, uint256 tokenId) view returns(uint256)
+func (_TokenRegister *TokenRegisterCaller) CalculateAssetIdWithTokenId(opts *bind.CallOpts, assetType *big.Int, tokenId *big.Int) (*big.Int, error) {
+	var out []interface{}
+	err := _TokenRegister.contract.Call(opts, &out, "calculateAssetIdWithTokenId", assetType, tokenId)
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// CalculateAssetIdWithTokenId is a free data retrieval call binding the contract method 0xa1cc5e13.
+//
+// Solidity: function calculateAssetIdWithTokenId(uint256 assetType, uint256 tokenId) view returns(uint256)
+func (_TokenRegister *TokenRegisterSession) CalculateAssetIdWithTokenId(assetType *big.Int, tokenId *big.Int) (*big.Int, error) {
+	return _TokenRegister.Contract.CalculateAssetIdWithTokenId(&_TokenRegister.CallOpts, assetType, tokenId)
+}
+
+// CalculateAssetIdWithTokenId is a free data retrieval call binding the contract method 0xa1cc5e13.
+//
+// Solidity: function calculateAssetIdWithTokenId(uint256 assetType, uint256 tokenId) view returns(uint256)
+func (_TokenRegister *TokenRegisterCallerSession) CalculateAssetIdWithTokenId(assetType *big.Int, tokenId *big.Int) (*big.Int, error) {
+	return _TokenRegister.Contract.CalculateAssetIdWithTokenId(&_TokenRegister.CallOpts, assetType, tokenId)
+}
+
+// CalculateMintableAssetId is a free data retrieval call binding the contract method 0xb12773fb.
+//
+// Solidity: function calculateMintableAssetId(uint256 assetType, bytes mintingBlob) pure returns(uint256)
+func (_TokenRegister *TokenRegisterCaller) CalculateMintableAssetId(opts *bind.CallOpts, assetType *big.Int, mintingBlob []byte) (*big.Int, error) {
+	var out []interface{}
+	err := _TokenRegister.contract.Call(opts, &out, "calculateMintableAssetId", assetType, mintingBlob)
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// CalculateMintableAssetId is a free data retrieval call binding the contract method 0xb12773fb.
+//
+// Solidity: function calculateMintableAssetId(uint256 assetType, bytes mintingBlob) pure returns(uint256)
+func (_TokenRegister *TokenRegisterSession) CalculateMintableAssetId(assetType *big.Int, mintingBlob []byte) (*big.Int, error) {
+	return _TokenRegister.Contract.CalculateMintableAssetId(&_TokenRegister.CallOpts, assetType, mintingBlob)
+}
+
+// CalculateMintableAssetId is a free data retrieval call binding the contract method 0xb12773fb.
+//
+// Solidity: function calculateMintableAssetId(uint256 assetType, bytes mintingBlob) pure returns(uint256)
+func (_TokenRegister *TokenRegisterCallerSession) CalculateMintableAssetId(assetType *big.Int, mintingBlob []byte) (*big.Int, error) {
+	return _TokenRegister.Contract.CalculateMintableAssetId(&_TokenRegister.CallOpts, assetType, mintingBlob)
+}
+
 // GetAssetInfo is a free data retrieval call binding the contract method 0xf637d950.
 //
-// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes assetInfo)
+// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes)
 func (_TokenRegister *TokenRegisterCaller) GetAssetInfo(opts *bind.CallOpts, assetType *big.Int) ([]byte, error) {
 	var out []interface{}
 	err := _TokenRegister.contract.Call(opts, &out, "getAssetInfo", assetType)
@@ -384,14 +446,14 @@ func (_TokenRegister *TokenRegisterCaller) GetAssetInfo(opts *bind.CallOpts, ass
 
 // GetAssetInfo is a free data retrieval call binding the contract method 0xf637d950.
 //
-// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes assetInfo)
+// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes)
 func (_TokenRegister *TokenRegisterSession) GetAssetInfo(assetType *big.Int) ([]byte, error) {
 	return _TokenRegister.Contract.GetAssetInfo(&_TokenRegister.CallOpts, assetType)
 }
 
 // GetAssetInfo is a free data retrieval call binding the contract method 0xf637d950.
 //
-// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes assetInfo)
+// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes)
 func (_TokenRegister *TokenRegisterCallerSession) GetAssetInfo(assetType *big.Int) ([]byte, error) {
 	return _TokenRegister.Contract.GetAssetInfo(&_TokenRegister.CallOpts, assetType)
 }
