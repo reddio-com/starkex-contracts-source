@@ -30,7 +30,7 @@ var (
 
 // DepositsMetaData contains all meta data concerning the Deposits contract.
 var DepositsMetaData = &bind.MetaData{
-	ABI: "[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"depositorEthKey\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonQuantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"}],\"name\":\"LogDeposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"}],\"name\":\"LogDepositCancel\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonQuantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"}],\"name\":\"LogDepositCancelReclaimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"}],\"name\":\"LogDepositNftCancelReclaimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"depositorEthKey\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"}],\"name\":\"LogNftDeposit\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEPOSIT_CANCEL_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"FREEZE_GRACE_PERIOD\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MAX_FORCED_ACTIONS_REQS_PER_BLOCK\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MAX_VERIFIER_COUNT\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"UNFREEZE_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"VERIFIER_REMOVAL_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"depositCancel\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"}],\"name\":\"depositERC20\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"depositEth\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"depositNft\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"depositNftReclaim\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"depositReclaim\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"}],\"name\":\"getAssetInfo\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"assetInfo\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"getCancellationRequest\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"request\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"getDepositBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"}],\"name\":\"getEthKey\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"getQuantizedDepositBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"presumedAssetType\",\"type\":\"uint256\"}],\"name\":\"getQuantum\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"quantum\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isFrozen\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
+	ABI: "[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"depositorEthKey\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonQuantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"}],\"name\":\"LogDeposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"}],\"name\":\"LogDepositCancel\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonQuantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"}],\"name\":\"LogDepositCancelReclaimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"}],\"name\":\"LogDepositNftCancelReclaimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"depositorEthKey\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonQuantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"}],\"name\":\"LogDepositWithTokenId\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonQuantizedAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"}],\"name\":\"LogDepositWithTokenIdCancelReclaimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"depositorEthKey\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"}],\"name\":\"LogNftDeposit\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEPOSIT_CANCEL_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"FREEZE_GRACE_PERIOD\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MAX_FORCED_ACTIONS_REQS_PER_BLOCK\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MAX_VERIFIER_COUNT\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"UNFREEZE_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"VERIFIER_REMOVAL_DELAY\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"calculateAssetIdWithTokenId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"mintingBlob\",\"type\":\"bytes\"}],\"name\":\"calculateMintableAssetId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"depositCancel\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"}],\"name\":\"depositERC1155\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"}],\"name\":\"depositERC20\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"depositEth\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"depositNft\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"depositNftReclaim\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"depositReclaim\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"quantizedAmount\",\"type\":\"uint256\"}],\"name\":\"depositWithTokenId\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"depositWithTokenIdReclaim\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"assetType\",\"type\":\"uint256\"}],\"name\":\"getAssetInfo\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"getCancellationRequest\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"request\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"getDepositBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ownerKey\",\"type\":\"uint256\"}],\"name\":\"getEthKey\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"starkKey\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"assetId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vaultId\",\"type\":\"uint256\"}],\"name\":\"getQuantizedDepositBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"presumedAssetType\",\"type\":\"uint256\"}],\"name\":\"getQuantum\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"quantum\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isFrozen\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
 }
 
 // DepositsABI is the input ABI used to generate the binding from.
@@ -365,9 +365,71 @@ func (_Deposits *DepositsCallerSession) VERIFIERREMOVALDELAY() (*big.Int, error)
 	return _Deposits.Contract.VERIFIERREMOVALDELAY(&_Deposits.CallOpts)
 }
 
+// CalculateAssetIdWithTokenId is a free data retrieval call binding the contract method 0xa1cc5e13.
+//
+// Solidity: function calculateAssetIdWithTokenId(uint256 assetType, uint256 tokenId) view returns(uint256)
+func (_Deposits *DepositsCaller) CalculateAssetIdWithTokenId(opts *bind.CallOpts, assetType *big.Int, tokenId *big.Int) (*big.Int, error) {
+	var out []interface{}
+	err := _Deposits.contract.Call(opts, &out, "calculateAssetIdWithTokenId", assetType, tokenId)
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// CalculateAssetIdWithTokenId is a free data retrieval call binding the contract method 0xa1cc5e13.
+//
+// Solidity: function calculateAssetIdWithTokenId(uint256 assetType, uint256 tokenId) view returns(uint256)
+func (_Deposits *DepositsSession) CalculateAssetIdWithTokenId(assetType *big.Int, tokenId *big.Int) (*big.Int, error) {
+	return _Deposits.Contract.CalculateAssetIdWithTokenId(&_Deposits.CallOpts, assetType, tokenId)
+}
+
+// CalculateAssetIdWithTokenId is a free data retrieval call binding the contract method 0xa1cc5e13.
+//
+// Solidity: function calculateAssetIdWithTokenId(uint256 assetType, uint256 tokenId) view returns(uint256)
+func (_Deposits *DepositsCallerSession) CalculateAssetIdWithTokenId(assetType *big.Int, tokenId *big.Int) (*big.Int, error) {
+	return _Deposits.Contract.CalculateAssetIdWithTokenId(&_Deposits.CallOpts, assetType, tokenId)
+}
+
+// CalculateMintableAssetId is a free data retrieval call binding the contract method 0xb12773fb.
+//
+// Solidity: function calculateMintableAssetId(uint256 assetType, bytes mintingBlob) pure returns(uint256)
+func (_Deposits *DepositsCaller) CalculateMintableAssetId(opts *bind.CallOpts, assetType *big.Int, mintingBlob []byte) (*big.Int, error) {
+	var out []interface{}
+	err := _Deposits.contract.Call(opts, &out, "calculateMintableAssetId", assetType, mintingBlob)
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// CalculateMintableAssetId is a free data retrieval call binding the contract method 0xb12773fb.
+//
+// Solidity: function calculateMintableAssetId(uint256 assetType, bytes mintingBlob) pure returns(uint256)
+func (_Deposits *DepositsSession) CalculateMintableAssetId(assetType *big.Int, mintingBlob []byte) (*big.Int, error) {
+	return _Deposits.Contract.CalculateMintableAssetId(&_Deposits.CallOpts, assetType, mintingBlob)
+}
+
+// CalculateMintableAssetId is a free data retrieval call binding the contract method 0xb12773fb.
+//
+// Solidity: function calculateMintableAssetId(uint256 assetType, bytes mintingBlob) pure returns(uint256)
+func (_Deposits *DepositsCallerSession) CalculateMintableAssetId(assetType *big.Int, mintingBlob []byte) (*big.Int, error) {
+	return _Deposits.Contract.CalculateMintableAssetId(&_Deposits.CallOpts, assetType, mintingBlob)
+}
+
 // GetAssetInfo is a free data retrieval call binding the contract method 0xf637d950.
 //
-// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes assetInfo)
+// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes)
 func (_Deposits *DepositsCaller) GetAssetInfo(opts *bind.CallOpts, assetType *big.Int) ([]byte, error) {
 	var out []interface{}
 	err := _Deposits.contract.Call(opts, &out, "getAssetInfo", assetType)
@@ -384,14 +446,14 @@ func (_Deposits *DepositsCaller) GetAssetInfo(opts *bind.CallOpts, assetType *bi
 
 // GetAssetInfo is a free data retrieval call binding the contract method 0xf637d950.
 //
-// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes assetInfo)
+// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes)
 func (_Deposits *DepositsSession) GetAssetInfo(assetType *big.Int) ([]byte, error) {
 	return _Deposits.Contract.GetAssetInfo(&_Deposits.CallOpts, assetType)
 }
 
 // GetAssetInfo is a free data retrieval call binding the contract method 0xf637d950.
 //
-// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes assetInfo)
+// Solidity: function getAssetInfo(uint256 assetType) view returns(bytes)
 func (_Deposits *DepositsCallerSession) GetAssetInfo(assetType *big.Int) ([]byte, error) {
 	return _Deposits.Contract.GetAssetInfo(&_Deposits.CallOpts, assetType)
 }
@@ -429,7 +491,7 @@ func (_Deposits *DepositsCallerSession) GetCancellationRequest(starkKey *big.Int
 
 // GetDepositBalance is a free data retrieval call binding the contract method 0xabf98fe1.
 //
-// Solidity: function getDepositBalance(uint256 starkKey, uint256 assetId, uint256 vaultId) view returns(uint256 balance)
+// Solidity: function getDepositBalance(uint256 starkKey, uint256 assetId, uint256 vaultId) view returns(uint256)
 func (_Deposits *DepositsCaller) GetDepositBalance(opts *bind.CallOpts, starkKey *big.Int, assetId *big.Int, vaultId *big.Int) (*big.Int, error) {
 	var out []interface{}
 	err := _Deposits.contract.Call(opts, &out, "getDepositBalance", starkKey, assetId, vaultId)
@@ -446,14 +508,14 @@ func (_Deposits *DepositsCaller) GetDepositBalance(opts *bind.CallOpts, starkKey
 
 // GetDepositBalance is a free data retrieval call binding the contract method 0xabf98fe1.
 //
-// Solidity: function getDepositBalance(uint256 starkKey, uint256 assetId, uint256 vaultId) view returns(uint256 balance)
+// Solidity: function getDepositBalance(uint256 starkKey, uint256 assetId, uint256 vaultId) view returns(uint256)
 func (_Deposits *DepositsSession) GetDepositBalance(starkKey *big.Int, assetId *big.Int, vaultId *big.Int) (*big.Int, error) {
 	return _Deposits.Contract.GetDepositBalance(&_Deposits.CallOpts, starkKey, assetId, vaultId)
 }
 
 // GetDepositBalance is a free data retrieval call binding the contract method 0xabf98fe1.
 //
-// Solidity: function getDepositBalance(uint256 starkKey, uint256 assetId, uint256 vaultId) view returns(uint256 balance)
+// Solidity: function getDepositBalance(uint256 starkKey, uint256 assetId, uint256 vaultId) view returns(uint256)
 func (_Deposits *DepositsCallerSession) GetDepositBalance(starkKey *big.Int, assetId *big.Int, vaultId *big.Int) (*big.Int, error) {
 	return _Deposits.Contract.GetDepositBalance(&_Deposits.CallOpts, starkKey, assetId, vaultId)
 }
@@ -491,7 +553,7 @@ func (_Deposits *DepositsCallerSession) GetEthKey(ownerKey *big.Int) (common.Add
 
 // GetQuantizedDepositBalance is a free data retrieval call binding the contract method 0x4e8912da.
 //
-// Solidity: function getQuantizedDepositBalance(uint256 starkKey, uint256 assetId, uint256 vaultId) view returns(uint256 balance)
+// Solidity: function getQuantizedDepositBalance(uint256 starkKey, uint256 assetId, uint256 vaultId) view returns(uint256)
 func (_Deposits *DepositsCaller) GetQuantizedDepositBalance(opts *bind.CallOpts, starkKey *big.Int, assetId *big.Int, vaultId *big.Int) (*big.Int, error) {
 	var out []interface{}
 	err := _Deposits.contract.Call(opts, &out, "getQuantizedDepositBalance", starkKey, assetId, vaultId)
@@ -508,14 +570,14 @@ func (_Deposits *DepositsCaller) GetQuantizedDepositBalance(opts *bind.CallOpts,
 
 // GetQuantizedDepositBalance is a free data retrieval call binding the contract method 0x4e8912da.
 //
-// Solidity: function getQuantizedDepositBalance(uint256 starkKey, uint256 assetId, uint256 vaultId) view returns(uint256 balance)
+// Solidity: function getQuantizedDepositBalance(uint256 starkKey, uint256 assetId, uint256 vaultId) view returns(uint256)
 func (_Deposits *DepositsSession) GetQuantizedDepositBalance(starkKey *big.Int, assetId *big.Int, vaultId *big.Int) (*big.Int, error) {
 	return _Deposits.Contract.GetQuantizedDepositBalance(&_Deposits.CallOpts, starkKey, assetId, vaultId)
 }
 
 // GetQuantizedDepositBalance is a free data retrieval call binding the contract method 0x4e8912da.
 //
-// Solidity: function getQuantizedDepositBalance(uint256 starkKey, uint256 assetId, uint256 vaultId) view returns(uint256 balance)
+// Solidity: function getQuantizedDepositBalance(uint256 starkKey, uint256 assetId, uint256 vaultId) view returns(uint256)
 func (_Deposits *DepositsCallerSession) GetQuantizedDepositBalance(starkKey *big.Int, assetId *big.Int, vaultId *big.Int) (*big.Int, error) {
 	return _Deposits.Contract.GetQuantizedDepositBalance(&_Deposits.CallOpts, starkKey, assetId, vaultId)
 }
@@ -645,6 +707,27 @@ func (_Deposits *DepositsTransactorSession) DepositCancel(starkKey *big.Int, ass
 	return _Deposits.Contract.DepositCancel(&_Deposits.TransactOpts, starkKey, assetId, vaultId)
 }
 
+// DepositERC1155 is a paid mutator transaction binding the contract method 0x49325bac.
+//
+// Solidity: function depositERC1155(uint256 starkKey, uint256 assetType, uint256 tokenId, uint256 vaultId, uint256 quantizedAmount) returns()
+func (_Deposits *DepositsTransactor) DepositERC1155(opts *bind.TransactOpts, starkKey *big.Int, assetType *big.Int, tokenId *big.Int, vaultId *big.Int, quantizedAmount *big.Int) (*types.Transaction, error) {
+	return _Deposits.contract.Transact(opts, "depositERC1155", starkKey, assetType, tokenId, vaultId, quantizedAmount)
+}
+
+// DepositERC1155 is a paid mutator transaction binding the contract method 0x49325bac.
+//
+// Solidity: function depositERC1155(uint256 starkKey, uint256 assetType, uint256 tokenId, uint256 vaultId, uint256 quantizedAmount) returns()
+func (_Deposits *DepositsSession) DepositERC1155(starkKey *big.Int, assetType *big.Int, tokenId *big.Int, vaultId *big.Int, quantizedAmount *big.Int) (*types.Transaction, error) {
+	return _Deposits.Contract.DepositERC1155(&_Deposits.TransactOpts, starkKey, assetType, tokenId, vaultId, quantizedAmount)
+}
+
+// DepositERC1155 is a paid mutator transaction binding the contract method 0x49325bac.
+//
+// Solidity: function depositERC1155(uint256 starkKey, uint256 assetType, uint256 tokenId, uint256 vaultId, uint256 quantizedAmount) returns()
+func (_Deposits *DepositsTransactorSession) DepositERC1155(starkKey *big.Int, assetType *big.Int, tokenId *big.Int, vaultId *big.Int, quantizedAmount *big.Int) (*types.Transaction, error) {
+	return _Deposits.Contract.DepositERC1155(&_Deposits.TransactOpts, starkKey, assetType, tokenId, vaultId, quantizedAmount)
+}
+
 // DepositERC20 is a paid mutator transaction binding the contract method 0x9ed17084.
 //
 // Solidity: function depositERC20(uint256 starkKey, uint256 assetType, uint256 vaultId, uint256 quantizedAmount) returns()
@@ -731,23 +814,65 @@ func (_Deposits *DepositsTransactorSession) DepositNftReclaim(starkKey *big.Int,
 
 // DepositReclaim is a paid mutator transaction binding the contract method 0xae873816.
 //
-// Solidity: function depositReclaim(uint256 starkKey, uint256 assetId, uint256 vaultId) returns()
-func (_Deposits *DepositsTransactor) DepositReclaim(opts *bind.TransactOpts, starkKey *big.Int, assetId *big.Int, vaultId *big.Int) (*types.Transaction, error) {
-	return _Deposits.contract.Transact(opts, "depositReclaim", starkKey, assetId, vaultId)
+// Solidity: function depositReclaim(uint256 starkKey, uint256 assetType, uint256 vaultId) returns()
+func (_Deposits *DepositsTransactor) DepositReclaim(opts *bind.TransactOpts, starkKey *big.Int, assetType *big.Int, vaultId *big.Int) (*types.Transaction, error) {
+	return _Deposits.contract.Transact(opts, "depositReclaim", starkKey, assetType, vaultId)
 }
 
 // DepositReclaim is a paid mutator transaction binding the contract method 0xae873816.
 //
-// Solidity: function depositReclaim(uint256 starkKey, uint256 assetId, uint256 vaultId) returns()
-func (_Deposits *DepositsSession) DepositReclaim(starkKey *big.Int, assetId *big.Int, vaultId *big.Int) (*types.Transaction, error) {
-	return _Deposits.Contract.DepositReclaim(&_Deposits.TransactOpts, starkKey, assetId, vaultId)
+// Solidity: function depositReclaim(uint256 starkKey, uint256 assetType, uint256 vaultId) returns()
+func (_Deposits *DepositsSession) DepositReclaim(starkKey *big.Int, assetType *big.Int, vaultId *big.Int) (*types.Transaction, error) {
+	return _Deposits.Contract.DepositReclaim(&_Deposits.TransactOpts, starkKey, assetType, vaultId)
 }
 
 // DepositReclaim is a paid mutator transaction binding the contract method 0xae873816.
 //
-// Solidity: function depositReclaim(uint256 starkKey, uint256 assetId, uint256 vaultId) returns()
-func (_Deposits *DepositsTransactorSession) DepositReclaim(starkKey *big.Int, assetId *big.Int, vaultId *big.Int) (*types.Transaction, error) {
-	return _Deposits.Contract.DepositReclaim(&_Deposits.TransactOpts, starkKey, assetId, vaultId)
+// Solidity: function depositReclaim(uint256 starkKey, uint256 assetType, uint256 vaultId) returns()
+func (_Deposits *DepositsTransactorSession) DepositReclaim(starkKey *big.Int, assetType *big.Int, vaultId *big.Int) (*types.Transaction, error) {
+	return _Deposits.Contract.DepositReclaim(&_Deposits.TransactOpts, starkKey, assetType, vaultId)
+}
+
+// DepositWithTokenId is a paid mutator transaction binding the contract method 0x29e411ac.
+//
+// Solidity: function depositWithTokenId(uint256 starkKey, uint256 assetType, uint256 tokenId, uint256 vaultId, uint256 quantizedAmount) returns()
+func (_Deposits *DepositsTransactor) DepositWithTokenId(opts *bind.TransactOpts, starkKey *big.Int, assetType *big.Int, tokenId *big.Int, vaultId *big.Int, quantizedAmount *big.Int) (*types.Transaction, error) {
+	return _Deposits.contract.Transact(opts, "depositWithTokenId", starkKey, assetType, tokenId, vaultId, quantizedAmount)
+}
+
+// DepositWithTokenId is a paid mutator transaction binding the contract method 0x29e411ac.
+//
+// Solidity: function depositWithTokenId(uint256 starkKey, uint256 assetType, uint256 tokenId, uint256 vaultId, uint256 quantizedAmount) returns()
+func (_Deposits *DepositsSession) DepositWithTokenId(starkKey *big.Int, assetType *big.Int, tokenId *big.Int, vaultId *big.Int, quantizedAmount *big.Int) (*types.Transaction, error) {
+	return _Deposits.Contract.DepositWithTokenId(&_Deposits.TransactOpts, starkKey, assetType, tokenId, vaultId, quantizedAmount)
+}
+
+// DepositWithTokenId is a paid mutator transaction binding the contract method 0x29e411ac.
+//
+// Solidity: function depositWithTokenId(uint256 starkKey, uint256 assetType, uint256 tokenId, uint256 vaultId, uint256 quantizedAmount) returns()
+func (_Deposits *DepositsTransactorSession) DepositWithTokenId(starkKey *big.Int, assetType *big.Int, tokenId *big.Int, vaultId *big.Int, quantizedAmount *big.Int) (*types.Transaction, error) {
+	return _Deposits.Contract.DepositWithTokenId(&_Deposits.TransactOpts, starkKey, assetType, tokenId, vaultId, quantizedAmount)
+}
+
+// DepositWithTokenIdReclaim is a paid mutator transaction binding the contract method 0xbe2b1105.
+//
+// Solidity: function depositWithTokenIdReclaim(uint256 starkKey, uint256 assetType, uint256 tokenId, uint256 vaultId) returns()
+func (_Deposits *DepositsTransactor) DepositWithTokenIdReclaim(opts *bind.TransactOpts, starkKey *big.Int, assetType *big.Int, tokenId *big.Int, vaultId *big.Int) (*types.Transaction, error) {
+	return _Deposits.contract.Transact(opts, "depositWithTokenIdReclaim", starkKey, assetType, tokenId, vaultId)
+}
+
+// DepositWithTokenIdReclaim is a paid mutator transaction binding the contract method 0xbe2b1105.
+//
+// Solidity: function depositWithTokenIdReclaim(uint256 starkKey, uint256 assetType, uint256 tokenId, uint256 vaultId) returns()
+func (_Deposits *DepositsSession) DepositWithTokenIdReclaim(starkKey *big.Int, assetType *big.Int, tokenId *big.Int, vaultId *big.Int) (*types.Transaction, error) {
+	return _Deposits.Contract.DepositWithTokenIdReclaim(&_Deposits.TransactOpts, starkKey, assetType, tokenId, vaultId)
+}
+
+// DepositWithTokenIdReclaim is a paid mutator transaction binding the contract method 0xbe2b1105.
+//
+// Solidity: function depositWithTokenIdReclaim(uint256 starkKey, uint256 assetType, uint256 tokenId, uint256 vaultId) returns()
+func (_Deposits *DepositsTransactorSession) DepositWithTokenIdReclaim(starkKey *big.Int, assetType *big.Int, tokenId *big.Int, vaultId *big.Int) (*types.Transaction, error) {
+	return _Deposits.Contract.DepositWithTokenIdReclaim(&_Deposits.TransactOpts, starkKey, assetType, tokenId, vaultId)
 }
 
 // DepositsLogDepositIterator is returned from FilterLogDeposit and is used to iterate over the raw logs and unpacked data for LogDeposit events raised by the Deposits contract.
@@ -1295,6 +1420,287 @@ func (_Deposits *DepositsFilterer) WatchLogDepositNftCancelReclaimed(opts *bind.
 func (_Deposits *DepositsFilterer) ParseLogDepositNftCancelReclaimed(log types.Log) (*DepositsLogDepositNftCancelReclaimed, error) {
 	event := new(DepositsLogDepositNftCancelReclaimed)
 	if err := _Deposits.contract.UnpackLog(event, "LogDepositNftCancelReclaimed", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// DepositsLogDepositWithTokenIdIterator is returned from FilterLogDepositWithTokenId and is used to iterate over the raw logs and unpacked data for LogDepositWithTokenId events raised by the Deposits contract.
+type DepositsLogDepositWithTokenIdIterator struct {
+	Event *DepositsLogDepositWithTokenId // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *DepositsLogDepositWithTokenIdIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(DepositsLogDepositWithTokenId)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(DepositsLogDepositWithTokenId)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *DepositsLogDepositWithTokenIdIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *DepositsLogDepositWithTokenIdIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// DepositsLogDepositWithTokenId represents a LogDepositWithTokenId event raised by the Deposits contract.
+type DepositsLogDepositWithTokenId struct {
+	DepositorEthKey    common.Address
+	StarkKey           *big.Int
+	VaultId            *big.Int
+	AssetType          *big.Int
+	TokenId            *big.Int
+	AssetId            *big.Int
+	NonQuantizedAmount *big.Int
+	QuantizedAmount    *big.Int
+	Raw                types.Log // Blockchain specific contextual infos
+}
+
+// FilterLogDepositWithTokenId is a free log retrieval operation binding the contract event 0xed94dc026fa9364c53bc0af51cde7f54f3109b3f31fceb26d01396d80e20453b.
+//
+// Solidity: event LogDepositWithTokenId(address depositorEthKey, uint256 starkKey, uint256 vaultId, uint256 assetType, uint256 tokenId, uint256 assetId, uint256 nonQuantizedAmount, uint256 quantizedAmount)
+func (_Deposits *DepositsFilterer) FilterLogDepositWithTokenId(opts *bind.FilterOpts) (*DepositsLogDepositWithTokenIdIterator, error) {
+
+	logs, sub, err := _Deposits.contract.FilterLogs(opts, "LogDepositWithTokenId")
+	if err != nil {
+		return nil, err
+	}
+	return &DepositsLogDepositWithTokenIdIterator{contract: _Deposits.contract, event: "LogDepositWithTokenId", logs: logs, sub: sub}, nil
+}
+
+// WatchLogDepositWithTokenId is a free log subscription operation binding the contract event 0xed94dc026fa9364c53bc0af51cde7f54f3109b3f31fceb26d01396d80e20453b.
+//
+// Solidity: event LogDepositWithTokenId(address depositorEthKey, uint256 starkKey, uint256 vaultId, uint256 assetType, uint256 tokenId, uint256 assetId, uint256 nonQuantizedAmount, uint256 quantizedAmount)
+func (_Deposits *DepositsFilterer) WatchLogDepositWithTokenId(opts *bind.WatchOpts, sink chan<- *DepositsLogDepositWithTokenId) (event.Subscription, error) {
+
+	logs, sub, err := _Deposits.contract.WatchLogs(opts, "LogDepositWithTokenId")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(DepositsLogDepositWithTokenId)
+				if err := _Deposits.contract.UnpackLog(event, "LogDepositWithTokenId", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseLogDepositWithTokenId is a log parse operation binding the contract event 0xed94dc026fa9364c53bc0af51cde7f54f3109b3f31fceb26d01396d80e20453b.
+//
+// Solidity: event LogDepositWithTokenId(address depositorEthKey, uint256 starkKey, uint256 vaultId, uint256 assetType, uint256 tokenId, uint256 assetId, uint256 nonQuantizedAmount, uint256 quantizedAmount)
+func (_Deposits *DepositsFilterer) ParseLogDepositWithTokenId(log types.Log) (*DepositsLogDepositWithTokenId, error) {
+	event := new(DepositsLogDepositWithTokenId)
+	if err := _Deposits.contract.UnpackLog(event, "LogDepositWithTokenId", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// DepositsLogDepositWithTokenIdCancelReclaimedIterator is returned from FilterLogDepositWithTokenIdCancelReclaimed and is used to iterate over the raw logs and unpacked data for LogDepositWithTokenIdCancelReclaimed events raised by the Deposits contract.
+type DepositsLogDepositWithTokenIdCancelReclaimedIterator struct {
+	Event *DepositsLogDepositWithTokenIdCancelReclaimed // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *DepositsLogDepositWithTokenIdCancelReclaimedIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(DepositsLogDepositWithTokenIdCancelReclaimed)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(DepositsLogDepositWithTokenIdCancelReclaimed)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *DepositsLogDepositWithTokenIdCancelReclaimedIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *DepositsLogDepositWithTokenIdCancelReclaimedIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// DepositsLogDepositWithTokenIdCancelReclaimed represents a LogDepositWithTokenIdCancelReclaimed event raised by the Deposits contract.
+type DepositsLogDepositWithTokenIdCancelReclaimed struct {
+	StarkKey           *big.Int
+	VaultId            *big.Int
+	AssetType          *big.Int
+	TokenId            *big.Int
+	AssetId            *big.Int
+	NonQuantizedAmount *big.Int
+	QuantizedAmount    *big.Int
+	Raw                types.Log // Blockchain specific contextual infos
+}
+
+// FilterLogDepositWithTokenIdCancelReclaimed is a free log retrieval operation binding the contract event 0xcc00f2179d127845242252f3c3b6b238c5ed33c2e933179f09653cfb1cdee7ca.
+//
+// Solidity: event LogDepositWithTokenIdCancelReclaimed(uint256 starkKey, uint256 vaultId, uint256 assetType, uint256 tokenId, uint256 assetId, uint256 nonQuantizedAmount, uint256 quantizedAmount)
+func (_Deposits *DepositsFilterer) FilterLogDepositWithTokenIdCancelReclaimed(opts *bind.FilterOpts) (*DepositsLogDepositWithTokenIdCancelReclaimedIterator, error) {
+
+	logs, sub, err := _Deposits.contract.FilterLogs(opts, "LogDepositWithTokenIdCancelReclaimed")
+	if err != nil {
+		return nil, err
+	}
+	return &DepositsLogDepositWithTokenIdCancelReclaimedIterator{contract: _Deposits.contract, event: "LogDepositWithTokenIdCancelReclaimed", logs: logs, sub: sub}, nil
+}
+
+// WatchLogDepositWithTokenIdCancelReclaimed is a free log subscription operation binding the contract event 0xcc00f2179d127845242252f3c3b6b238c5ed33c2e933179f09653cfb1cdee7ca.
+//
+// Solidity: event LogDepositWithTokenIdCancelReclaimed(uint256 starkKey, uint256 vaultId, uint256 assetType, uint256 tokenId, uint256 assetId, uint256 nonQuantizedAmount, uint256 quantizedAmount)
+func (_Deposits *DepositsFilterer) WatchLogDepositWithTokenIdCancelReclaimed(opts *bind.WatchOpts, sink chan<- *DepositsLogDepositWithTokenIdCancelReclaimed) (event.Subscription, error) {
+
+	logs, sub, err := _Deposits.contract.WatchLogs(opts, "LogDepositWithTokenIdCancelReclaimed")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(DepositsLogDepositWithTokenIdCancelReclaimed)
+				if err := _Deposits.contract.UnpackLog(event, "LogDepositWithTokenIdCancelReclaimed", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseLogDepositWithTokenIdCancelReclaimed is a log parse operation binding the contract event 0xcc00f2179d127845242252f3c3b6b238c5ed33c2e933179f09653cfb1cdee7ca.
+//
+// Solidity: event LogDepositWithTokenIdCancelReclaimed(uint256 starkKey, uint256 vaultId, uint256 assetType, uint256 tokenId, uint256 assetId, uint256 nonQuantizedAmount, uint256 quantizedAmount)
+func (_Deposits *DepositsFilterer) ParseLogDepositWithTokenIdCancelReclaimed(log types.Log) (*DepositsLogDepositWithTokenIdCancelReclaimed, error) {
+	event := new(DepositsLogDepositWithTokenIdCancelReclaimed)
+	if err := _Deposits.contract.UnpackLog(event, "LogDepositWithTokenIdCancelReclaimed", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
