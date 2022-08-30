@@ -17,6 +17,8 @@ abi: prepare-abi
 	&& cp abi/UpdateState.abi ../abi
 	cd tmp && solc-0.6.12 --abi starkex-contracts/scalable-dex/contracts/src/starkex/interactions/FullWithdrawals.sol --optimize --overwrite --bin-runtime --base-path ./ --allow-paths `pwd`/starkex-contracts/scalable-dex/contracts/src/starkex,`pwd`/starkex-contracts/scalable-dex/contracts/src --output-dir  abi \
 	&& cp abi/FullWithdrawals.abi ../abi
+	cd tmp && solc-0.6.12 --abi starkex-contracts/scalable-dex/contracts/src/starkex/interactions/StarkExForcedActionState.sol --optimize --overwrite --bin-runtime --base-path ./ --allow-paths `pwd`/starkex-contracts/scalable-dex/contracts/src/starkex,`pwd`/starkex-contracts/scalable-dex/contracts/src --output-dir  abi \
+	&& cp abi/StarkExForcedActionState.abi ../abi
 	rm -rf tmp
 prepare-go-souce-dir:
 	mkdir -p source/tokenRegister
@@ -25,6 +27,7 @@ prepare-go-souce-dir:
 	mkdir -p source/withdrawals
 	mkdir -p source/updateState
 	mkdir -p source/fullWithdrawals
+	mkdir -p source/starkExForcedActionState
 go-source: prepare-go-souce-dir
 	abigen --abi=abi/TokenRegister.abi --pkg=tokenRegister --out=source/tokenRegister/tokenRegister.go
 	abigen --abi=abi/Users.abi --pkg=users --out=source/users/users.go
@@ -32,4 +35,5 @@ go-source: prepare-go-souce-dir
 	abigen --abi=abi/Withdrawals.abi --pkg=withdrawals --out=source/withdrawals/withdrawals.go
 	abigen --abi=abi/UpdateState.abi --pkg=updateState --out=source/updateState/updateState.go
 	abigen --abi=abi/FullWithdrawals.abi --pkg=fullWithdrawals --out=source/fullWithdrawals/FullWithdrawals.go
+	abigen --abi=abi/StarkExForcedActionState.abi --pkg=starkExForcedActionState --out=source/starkExForcedActionState/StarkExForcedActionState.go
 all: abi go-source
