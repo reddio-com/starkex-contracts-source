@@ -1,3 +1,4 @@
+default: all
 prepare-abi:
 	rm -rf tmp
 	mkdir -p tmp
@@ -15,6 +16,8 @@ abi: prepare-abi
 	&& cp abi/Deposits.abi ../abi
 	cd tmp && solc-0.6.12 --abi starkex-contracts/scalable-dex/contracts/src/interactions/Withdrawals.sol  --optimize --overwrite --bin-runtime --base-path ./ --allow-paths `pwd`/starkex-contracts/scalable-dex/contracts/src --output-dir  abi \
 	&& cp abi/Withdrawals.abi ../abi
+	cd tmp && solc-0.6.12 --abi starkex-contracts/scalable-dex/contracts/src/interactions/AcceptModifications.sol  --optimize --overwrite --bin-runtime --base-path ./ --allow-paths `pwd`/starkex-contracts/scalable-dex/contracts/src --output-dir  abi \
+	&& cp abi/AcceptModifications.abi ../abi
 	cd tmp && solc-0.6.12 --abi starkex-contracts/scalable-dex/contracts/src/starkex/interactions/UpdateState.sol  --optimize --overwrite --bin-runtime --base-path ./ --allow-paths `pwd`/starkex-contracts/scalable-dex/contracts/src/starkex,`pwd`/starkex-contracts/scalable-dex/contracts/src --output-dir  abi \
 	&& cp abi/UpdateState.abi ../abi
 	cd tmp && solc-0.6.12 --abi starkex-contracts/scalable-dex/contracts/src/starkex/interactions/FullWithdrawals.sol --optimize --overwrite --bin-runtime --base-path ./ --allow-paths `pwd`/starkex-contracts/scalable-dex/contracts/src/starkex,`pwd`/starkex-contracts/scalable-dex/contracts/src --output-dir  abi \
@@ -28,6 +31,7 @@ prepare-go-souce-dir:
 	mkdir -p source/vaultDepositWithdrawal
 	mkdir -p source/deposits
 	mkdir -p source/withdrawals
+	mkdir -p source/acceptModifications
 	mkdir -p source/updateState
 	mkdir -p source/fullWithdrawals
 	mkdir -p source/starkExForcedActionState
@@ -37,6 +41,7 @@ go-source: prepare-go-souce-dir
 	abigen --abi=abi/VaultDepositWithdrawal.abi --pkg=vaultDepositWithdrawal --out=source/vaultDepositWithdrawal/VaultDepositWithdrawal.go
 	abigen --abi=abi/Deposits.abi --pkg=deposits --out=source/deposits/deposits.go
 	abigen --abi=abi/Withdrawals.abi --pkg=withdrawals --out=source/withdrawals/withdrawals.go
+	abigen --abi=abi/AcceptModifications.abi --pkg=acceptModifications --out=source/acceptModifications/AcceptModifications.go
 	abigen --abi=abi/UpdateState.abi --pkg=updateState --out=source/updateState/updateState.go
 	abigen --abi=abi/FullWithdrawals.abi --pkg=fullWithdrawals --out=source/fullWithdrawals/FullWithdrawals.go
 	abigen --abi=abi/StarkExForcedActionState.abi --pkg=starkExForcedActionState --out=source/starkExForcedActionState/StarkExForcedActionState.go
